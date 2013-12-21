@@ -1,12 +1,14 @@
 <html>
   <head>
+    <title>Laredo Bridge Cams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <script src='js/jquery-1.10.2.js'></script>
     <script src='js/handlebars-1.1.2.js'></script>
     <script src='js/ember-1.2.0.js'></script>
     <script src='js/ember-data.js'></script>
     <script src='js/app.js'></script>
     <link rel='stylesheet' href='css/bootstrap.css' media='screen'>
-    <link rel='stylesheet' href='css/application.css' >
   </head>
   <body>
     <script type='text/x-handlebars' data-template-name='application'>
@@ -27,5 +29,24 @@
         <p class='pull-left'>&copy; 2013 </p>
       </footer>
     </script>
+
+    <script type="text/x-handlebars" id="index">
+      <h1>Bridge Cams</h1>
+      <ul class='list-unstyled'>
+        {{#each}}
+          <li>{{#link-to 'cam' this}}{{title}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </script>
+
+    <script type="text/x-handlebars" id="cam">
+        <h2>{{title}}</h2>
+        <h3>USA Side</h3>
+        <img {{bind-attr src='images.us'}} class='img-responsive' />
+        <h3>México Side</h3>
+        <img {{bind-attr src='images.mx'}} class='img-responsive' />
+        {{#link-to 'index'}}Back{{/link-to}}
+    </script>
+
   </body>
 </html>
