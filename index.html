@@ -11,17 +11,29 @@
     <link rel='stylesheet' href='css/bootstrap.css' media='screen'>
   </head>
   <body>
-    <script type='text/x-handlebars' data-template-name='application'>
+    <script type='text/x-handlebars' data-template-name='cams'>
       <div class='navbar navbar-inverse'>
         <div class='container'>
           <ul class='nav navbar-nav navbar-right'>
-            <li>{{#linkTo 'index' }}Home{{/linkTo}}</li>
+            <li>{{#linkTo 'cams.index' }}Home{{/linkTo}}</li>
           </ul>
         </div>
       </div>
 
       <div class='container'>
-        {{outlet}}
+        <div class="row">
+          <div class="col-md-4">
+            <h1>Bridge Cams</h1>
+            <ul class='list-unstyled'>
+              {{#each}}
+                <li>{{#link-to 'cams.cam' this}}{{title}}{{/link-to}}</li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="col-md-8">
+            {{outlet}}
+          </div>
+        </div>
       </div>
 
       <footer class='container'>
@@ -30,22 +42,13 @@
       </footer>
     </script>
 
-    <script type="text/x-handlebars" id="index">
-      <h1>Bridge Cams</h1>
-      <ul class='list-unstyled'>
-        {{#each}}
-          <li>{{#link-to 'cam' this}}{{title}}{{/link-to}}</li>
-        {{/each}}
-      </ul>
-    </script>
-
-    <script type="text/x-handlebars" id="cam">
+    <script type="text/x-handlebars" id="cams/cam">
         <h2>{{title}}</h2>
-        <h3>USA Side</h3>
-        <img {{bind-attr src='images.us'}} class='img-responsive' />
         <h3>México Side</h3>
         <img {{bind-attr src='images.mx'}} class='img-responsive' />
-        {{#link-to 'index'}}Back{{/link-to}}
+        <h3>USA Side</h3>
+        <img {{bind-attr src='images.us'}} class='img-responsive' />
+        {{#link-to 'cams.index'}}Back{{/link-to}}
     </script>
 
   </body>

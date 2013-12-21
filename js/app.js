@@ -7,7 +7,7 @@ var LaredoCamApp = Ember.Application.create({
 LaredoCamApp.BRIDGES = [
   {
     id: '1',
-    title: 'Puente de las Americas Bridge I',
+    title: 'Puente de las Americas (Bridge I)',
     images: {
       us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam1.jpg',
       mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam2.jpg'
@@ -15,7 +15,7 @@ LaredoCamApp.BRIDGES = [
   },
   {
     id: '2',
-    title: 'Juarez Lincoln Bridge',
+    title: 'Juarez-Lincoln (Bridge II)',
     images: {
       us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam1.jpg',
       mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam2.jpg'
@@ -23,7 +23,7 @@ LaredoCamApp.BRIDGES = [
   },
   {
     id: '3',
-    title: 'Colombia Bridge',
+    title: 'Colombia (Bridge III)',
     images: {
       us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam2.jpg',
       mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam1.jpg'
@@ -31,7 +31,7 @@ LaredoCamApp.BRIDGES = [
   },
   {
     id: '4',
-    title: 'World Trade Bridge',
+    title: 'World Trade (Bridge IV)',
     images: {
       us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam2.jpg',
       mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam1.jpg'
@@ -41,19 +41,21 @@ LaredoCamApp.BRIDGES = [
 
 // Router
 LaredoCamApp.Router.map(function() {
-  this.resource('cam', {path: '/cams/:id'});
+  this.resource('cams', {path: '/'}, function() {
+    this.route('cam', { path: '/cams/:cam_id' })
+  });
 })
 
 // Routes
-LaredoCamApp.IndexRoute = Ember.Route.extend({
+LaredoCamApp.CamsRoute = Ember.Route.extend({
   model: function() {
     return LaredoCamApp.BRIDGES;
   }
 });
 
-LaredoCamApp.CamRoute = Ember.Route.extend({
+LaredoCamApp.CamsCamRoute = Ember.Route.extend({
   model: function(params) {
-    return LaredoCamApp.BRIDGES.findBy('id', params.id);
+    return LaredoCamApp.BRIDGES.findBy('id', params.cam_id);
   }
 });
 
