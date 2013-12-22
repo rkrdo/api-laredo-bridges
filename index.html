@@ -7,26 +7,58 @@
     <script src='js/handlebars-1.1.2.js'></script>
     <script src='js/ember-1.2.0.js'></script>
     <script src='js/ember-data.js'></script>
+    <script src='js/bootstrap.js'></script>
     <script src='js/app.js'></script>
     <link rel='stylesheet' href='css/bootstrap.css' media='screen'>
   </head>
   <body>
     <script type='text/x-handlebars' data-template-name='cams'>
-      <div class='navbar navbar-inverse'>
-        <div class='container'>
-          <ul class='nav navbar-nav navbar-right'>
-            <li>{{#linkTo 'cams.index' }}Home{{/linkTo}}</li>
-          </ul>
+      <nav class='navbar navbar-inverse' role='navigation'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {{#link-to 'cams.index' class='navbar-brand'}}Laredo Bridges{{/link-to}}
         </div>
-      </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--<ul class="nav navbar-nav">-->
+            <!--</ul>-->
+
+            <ul class="nav navbar-nav navbar-right">
+              <li>{{#link-to 'cams.index' }}Home{{/link-to}}</li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bridges <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  {{#each}}
+                    <li>{{#link-to 'cams.cam' this class='list-group-item'}}{{title}}{{/link-to}}</li>
+                  {{/each}}
+                  <!--<li><a href="#">Action</a></li>-->
+                  <!--<li><a href="#">Another action</a></li>-->
+                  <!--<li><a href="#">Something else here</a></li>-->
+                  <!--<li class="divider"></li>-->
+                  <!--<li><a href="#">Separated link</a></li>-->
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+        <!--<div class='container'>-->
+          <!--<ul class='nav navbar-nav navbar-right'>-->
+          <!--</ul>-->
+        <!--</div>-->
+      </nav>
 
       <div class='container'>
         <div class="row">
           <div class="col-md-4">
-            <h1>Bridge Cams</h1>
-            <ul class='list-unstyled'>
+            <h1 class='text-center'>Bridge Cams</h1>
+            <ul class='list-group list-unstyled'>
               {{#each}}
-                <li>{{#link-to 'cams.cam' this}}{{title}}{{/link-to}}</li>
+                <li>{{#link-to 'cams.cam' this class='list-group-item'}}{{title}}{{/link-to}}</li>
               {{/each}}
             </ul>
           </div>
@@ -38,17 +70,17 @@
 
       <footer class='container'>
         <hr />
-        <p class='pull-left'>&copy; 2013 </p>
+        <p class='pull-right'>&copy; 2013 </p>
       </footer>
     </script>
 
     <script type="text/x-handlebars" id="cams/cam">
-        <h2>{{title}}</h2>
-        <h3>México Side</h3>
-        <img {{bind-attr src='images.mx'}} class='img-responsive' />
-        <h3>USA Side</h3>
-        <img {{bind-attr src='images.us'}} class='img-responsive' />
-        {{#link-to 'cams.index'}}Back{{/link-to}}
+        <h2 class='text-center'>{{title}}</h2>
+        <h3 class='text-center'>México Side</h3>
+        <img {{bind-attr src='images.mx'}} class='img-responsive center-block' />
+        <h3 class='text-center'>USA Side</h3>
+        <img {{bind-attr src='images.us'}} class='img-responsive center-block' />
+        {{#link-to 'cams.index' class='pull-right'}}Back{{/link-to}}
     </script>
 
   </body>
