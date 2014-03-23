@@ -20,3 +20,8 @@ get "/laredo/:bridge_num.json" do
   content_type :json
   BWT::Laredo.send("bridge_#{BRIDGES[params[:bridge_num].to_s]}").to_json
 end
+
+get "/laredo.json" do
+  content_type :json
+  BWT::Laredo.all_ports.to_json
+end
