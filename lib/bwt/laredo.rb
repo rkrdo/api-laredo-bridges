@@ -9,11 +9,42 @@ module BWT
         four: "230404"
       }
 
+      CAMS = {
+        "1" => {
+          title: 'Puente de las Americas (Bridge I)',
+          images: {
+            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam1.jpg',
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam2.jpg'
+          }
+        },
+        "2" => {
+          title: 'Juarez-Lincoln (Bridge II)',
+          images: {
+            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam1.jpg',
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam2.jpg'
+          }
+        },
+        "3" => {
+          title: 'Colombia (Bridge III)',
+          images: {
+            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam2.jpg',
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam1.jpg'
+          }
+        },
+        "4" => {
+          title: 'World Trade (Bridge IV)',
+          images: {
+            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam2.jpg',
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam1.jpg'
+          }
+        }
+      }
+
       def all_ports
         super.select do |p|
           p[:port_name] == "Laredo"
         end.each_with_index.each_with_object([]) do |(bridge, index), obj|
-          obj << bridge.merge({cam_id: (index+1).to_s})
+          obj << bridge.merge({id: (index+1).to_s}).merge(CAMS["#{(index+1).to_s}"])
         end
       end
 

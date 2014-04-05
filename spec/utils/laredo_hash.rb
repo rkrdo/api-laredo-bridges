@@ -58,7 +58,12 @@ LAREDO_HASH = [
         "lanes_open"=>"2",
       }
     },
-    "cam_id"=>"1"
+    "id"=>"1",
+    "title" => 'Puente de las Americas (Bridge I)',
+    "images" => {
+      "us" => 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam1.jpg',
+      "mx" => 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam2.jpg'
+    }
   },
   {
     "port_number"=>"230402",
@@ -120,7 +125,12 @@ LAREDO_HASH = [
       }
     },
     "construction_notice"=>"Ready Lanes are open from 8AM - Midnight seven days a week.\n\nGo to www.GetYouHome.gov for more information.",
-    "cam_id"=>"2"
+    "id"=>"2",
+    "title" => 'Juarez-Lincoln (Bridge II)',
+    "images"=> {
+      "us"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam1.jpg',
+      "mx"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam2.jpg'
+    }
   },
   {
     "port_number"=>"230403",
@@ -178,7 +188,12 @@ LAREDO_HASH = [
         "lanes_open"=>nil
       }
     },
-    "cam_id"=> "3"
+    "id"=> "3",
+    "title" => 'Colombia (Bridge III)',
+    "images"=> {
+      "us"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam2.jpg',
+      "mx"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam1.jpg'
+    }
   },
   {
     "port_number"=>"230404",
@@ -239,6 +254,11 @@ LAREDO_HASH = [
         "lanes_open"=>nil
       }
     },
-    "cam_id"=>"4"
+    "id"=>"4",
+    "title" => 'World Trade (Bridge IV)',
+    "images"=> {
+      "us"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam2.jpg',
+      "mx"=> 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam1.jpg'
+    }
   }
 ]
