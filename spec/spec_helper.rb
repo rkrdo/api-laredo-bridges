@@ -11,4 +11,4 @@ require 'utils/laredo_hash'
 
 Dir["#{Dir.pwd}/lib/**/*rb"].each { |file| require file }
 
-Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new color: true
+#Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new color: true
