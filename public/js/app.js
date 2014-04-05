@@ -57,7 +57,8 @@ LaredoCamApp.CamsRoute = Ember.Route.extend({
 LaredoCamApp.CamsCamRoute = Ember.Route.extend({
   model: function(params) {
     //return LaredoCamApp.BRIDGES.findBy('id', params.cam_id);
-    return Ember.$.getJSON('/laredo/' + params.cam_id + '.json');
+    //return Ember.$.getJSON('/laredo/' + params.cam_id + '.json');
+    return this.modelFor('cams').findBy('id', params.cam_id);
   }
 });
 
