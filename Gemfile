@@ -7,7 +7,7 @@ ruby '1.9.3'
 
 gem 'sinatra', '1.4.4'
 gem 'thin', '1.6.2'
-gem 'active_support'
+gem 'activesupport', '~> 3.2.10'
 gem 'i18n'
 
 group :test do

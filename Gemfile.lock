@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    active_support (3.0.0)
-      activesupport (= 3.0.0)
-    activesupport (3.0.0)
+    activesupport (3.2.15)
+      i18n (~> 0.6, >= 0.6.4)
+      multi_json (~> 1.0)
     addressable (2.3.5)
     ansi (1.4.3)
     builder (3.2.2)
@@ -50,6 +50,7 @@ GEM
       builder
       minitest (>= 5.0)
       powerbar
+    multi_json (1.8.1)
     nio4r (1.0.0)
     powerbar (1.0.11)
       ansi (~> 1.4.0)
@@ -85,7 +86,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_support
+  activesupport (~> 3.2.10)
   debugger
   guard-minitest
   i18n
