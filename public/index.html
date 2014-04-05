@@ -8,6 +8,7 @@
     <script src='js/ember-1.2.0.js'></script>
     <script src='js/ember-data.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script src='js/pace.min.js'></script>
     <script src='js/app.js'></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -20,6 +21,7 @@
 
     </script>
     <link rel='stylesheet' href='css/bootstrap.min.css' media='screen'>
+    <link rel='stylesheet' href='css/pace.css' media='screen'>
   </head>
   <body>
     <script type='text/x-handlebars' data-template-name='cams'>
@@ -95,6 +97,40 @@
         <h3 class='text-center'>USA Side</h3>
         <img {{bind-attr src='images.us'}} class='img-responsive center-block' />
         {{#link-to 'cams.index' class='pull-right'}}Back{{/link-to}}
+    </script>
+
+    <script type="text/x-handlebars" id="loading">
+      {{partial "loading_navbar"}}
+      <div class="container">
+        <div class="row">
+          <h1>Fetching Content...</h1>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" id="_loading_navbar">
+      <nav class='navbar navbar-inverse' role='navigation'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href='#' class='navbar-brand'>Laredo Bridges</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href='#'>Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bridges <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
     </script>
 
   </body>
