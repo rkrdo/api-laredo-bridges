@@ -5,6 +5,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('cams', {path: '/'}, function() {
+    this.route('cam', { path: '/cams/:cam_id' });
+  });
 });
 
 export default Router;

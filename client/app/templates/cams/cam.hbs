@@ -1,0 +1,10 @@
+<h2 class='text-center'>{{available title}}</h2>
+<h5 class='text-center'>Port Status: {{available port_status}}</h5>
+<h5 class='text-center'>Lanes Open: {{available_lanes passenger_vehicle_lanes.standard_lanes.lanes_open}}</h5>
+<h5 class='text-center'>Delay: {{available_delay passenger_vehicle_lanes.standard_lanes.delay_minutes}}</h5>
+<h5 class='text-center'>Updated at: {{available passenger_vehicle_lanes.standard_lanes.update_time}}</h5>
+<h3 class='text-center'>México Side</h3>
+<img {{bind-attr src='images.mx'}} class='img-responsive center-block' />
+<h3 class='text-center'>USA Side</h3>
+<img {{bind-attr src='images.us'}} class='img-responsive center-block' />
+{{#link-to 'cams.index' class='pull-right'}}Back{{/link-to}}
