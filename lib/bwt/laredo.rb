@@ -14,7 +14,7 @@ module BWT
           title: 'Puente de las Americas (Bridge I)',
           images: {
             us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam1.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam2.jpg'
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/TowerBridge/172.21.51.88/b1mex.jpg'
           }
         },
         "2" => {
@@ -28,14 +28,14 @@ module BWT
           title: 'Colombia (Bridge III)',
           images: {
             us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam2.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam1.jpg'
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/Bridge3_Span/172.21.53.58/b3mex.jpg'
           }
         },
         "4" => {
           title: 'World Trade (Bridge IV)',
           images: {
             us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam2.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam1.jpg'
+            mx: 'http://www.ci.laredo.tx.us/bridgesys/Bridge_Span/172.21.54.29/b4mex.jpg'
           }
         }
       }
