@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'sinatra'
+require 'sinatra/respond_with'
 require 'lib/bwt/general'
 require 'lib/bwt/laredo'
 require 'json'
@@ -12,12 +13,12 @@ BRIDGES =  {
   "4" => "four"
 }
 
-get "/laredo/:bridge_num.json" do
-  content_type :json
-  BWT::Laredo.send("bridge_#{BRIDGES[params[:bridge_num].to_s]}").to_json
+respond_to :json
+
+get "/laredo/:bridge_num" do
+  respond_with BWT::Laredo.send("bridge_#{BRIDGES[params[:bridge_num].to_s]}")
 end
 
-get "/laredo.json" do
-  content_type :json
-  BWT::Laredo.all_ports.to_json
+get "/laredo" do
+  respond_with BWT::Laredo.all_ports
 end
