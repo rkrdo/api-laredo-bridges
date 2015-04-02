@@ -2,17 +2,14 @@
 source "https://rubygems.org"
 ruby '2.1.5'
 
-# gem "rails"
-# gem 'rack'
-
-gem 'sinatra', '1.4.4'
-gem 'thin', '1.6.2'
-gem 'activesupport', '~> 3.2.10'
-gem 'i18n'
+gem 'sinatra', '~> 1.4.5'
+gem 'thin', '~> 1.6.3'
+gem 'activesupport', '~> 4.2.1'
 
 group :test do
-  gem 'guard-minitest'
-  gem 'minitest-reporters'
-  gem 'debugger'
-  gem 'webmock'
+  gem 'guard', '~> 2.12.5'
+  gem 'guard-minitest', '~> 2.4.4'
+  gem 'minitest-reporters', '~> 1.0.11'
+  gem 'byebug', '~> 4.0.4'
+  gem 'webmock', '~> 1.21.0'
 end
