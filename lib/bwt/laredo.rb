@@ -41,11 +41,13 @@ module BWT
       }
 
       def all_ports
-        super.select do |p|
-          p[:port_name] == "Laredo"
-        end.each_with_index.each_with_object([]) do |(bridge, index), obj|
+        super.select(&laredo).each_with_index.each_with_object([]) do |(bridge, index), obj|
           obj << bridge.merge({id: (index+1).to_s}).merge(CAMS["#{(index+1).to_s}"])
         end
+      end
+
+      def laredo
+        ->(p) { p[:port_name] == 'Laredo' }
       end
 
       def method_missing(name, *args)
