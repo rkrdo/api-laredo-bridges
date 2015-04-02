@@ -1,8 +1,9 @@
-require 'active_support/core_ext'
+require 'active_support/core_ext/hash/indifferent_access'
+require 'active_support/core_ext/hash/conversions'
 require 'net/http'
 
 module BWT
-  class General
+  class General < BasicObject
     class << self
       def uri
         URI 'http://apps.cbp.gov/bwt/bwt.xml'
@@ -13,7 +14,7 @@ module BWT
       end
 
       def find_by_port_name(name)
-        all_ports.select { |port| port[:port_name] =~ Regexp.new(name, true) }
+        all_ports.select { |port| port[:port_name].match Regexp.new(name, true) }
       end
 
       private
@@ -23,7 +24,7 @@ module BWT
         end
 
         def make_request
-          Net::HTTP.get self.uri
+          Net::HTTP.get uri
         end
 
     end
