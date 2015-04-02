@@ -2,6 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'sinatra'
 require 'sinatra/respond_with'
+require 'rack/cors'
 require 'lib/bwt/general'
 require 'lib/bwt/laredo'
 require 'json'
@@ -12,6 +13,13 @@ BRIDGES =  {
   "3" => "three",
   "4" => "four"
 }
+
+use Rack::Cors do
+  allow do
+      origins '*'
+      resource '*', methods: :get, headers: :any, max_age: 0
+  end
+end
 
 respond_to :json
 

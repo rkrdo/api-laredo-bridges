@@ -4,6 +4,7 @@ ruby '2.1.5'
 
 gem 'sinatra', '~> 1.4.5'
 gem 'sinatra-contrib', '~> 1.4.2'
+gem 'rack-cors', '~> 0.3.1'
 gem 'thin', '~> 1.6.3'
 gem 'activesupport', '~> 4.2.1'
 
