@@ -12,10 +12,6 @@ BRIDGES =  {
   "4" => "four"
 }
 
-get "/" do
-  send_file "public/index.html"
-end
-
 get "/laredo/:bridge_num.json" do
   content_type :json
   BWT::Laredo.send("bridge_#{BRIDGES[params[:bridge_num].to_s]}").to_json
