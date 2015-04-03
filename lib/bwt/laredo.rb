@@ -46,13 +46,14 @@ module BWT
         end
       end
 
-      def laredo
-        ->(p) { p[:port_name] == 'Laredo' }
+      def bridge(bridge_num)
+        all_ports.detect { |p| p[:port_number] == BRIDGES[bridge_num] }
       end
 
-      def method_missing(name, *args)
-        super unless name =~ /^bridge_(.*)$/ && BRIDGES.keys.include?($1.to_sym)
-        all_ports.select { |p| p[:port_number] == BRIDGES[$1.to_sym] }.first
+      private
+
+      def laredo
+        ->(p) { p[:port_name] == 'Laredo' }
       end
 
     end
