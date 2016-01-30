@@ -7,6 +7,7 @@ gem 'sinatra-contrib', '~> 1.4.2'
 gem 'rack-cors', '~> 0.3.1'
 gem 'thin', '~> 1.6.3'
 gem 'activesupport', '~> 4.2.1'
+gem 'grape', '~> 0.14.0'
 
 group :test do
   gem 'guard', '~> 2.12.5'
