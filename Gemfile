@@ -13,4 +13,5 @@ group :test do
   gem 'minitest-reporters', '~> 1.0.11'
   gem 'byebug', '~> 4.0.4'
   gem 'webmock', '~> 1.21.0'
+  gem 'rack-test', '~> 0.6.3'
 end
