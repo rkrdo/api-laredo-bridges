@@ -6,7 +6,7 @@ module BWT
   class General < BasicObject
     class << self
       def uri
-        URI 'http://apps.cbp.gov/bwt/bwt.xml'
+        URI 'https://apps.cbp.gov/bwt/bwt.xml'
       end
 
       def all_ports
