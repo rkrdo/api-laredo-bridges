@@ -28,7 +28,7 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
-    eventmachine (1.0.7)
+    eventmachine (1.2.1)
     ffi (1.9.8)
     formatador (0.2.5)
     grape (0.14.0)
@@ -129,3 +129,9 @@ DEPENDENCIES
   rack-test (~> 0.6.3)
   thin (~> 1.6.3)
   webmock (~> 1.21.0)
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.13.1
