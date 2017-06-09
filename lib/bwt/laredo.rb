@@ -13,29 +13,29 @@ module BWT
         "1" => {
           title: 'Puente de las Americas (Bridge I)',
           images: {
-            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb1cam1.jpg',
+            us: 'http://www.cityoflaredo.com/bridgesys/EntryLanees/172.21.51.112/hugeb1cam1.jpg',
             mx: 'http://www.ci.laredo.tx.us/bridgesys/TowerBridge/172.21.51.88/b1mex.jpg'
           }
         },
         "2" => {
           title: 'Juarez-Lincoln (Bridge II)',
           images: {
-            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam1.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/hugeb2cam2.jpg'
+            us: 'http://www.cityoflaredo.com/bridgesys/B2USA.jpg',
+            mx: 'http://www.cityoflaredo.com/bridgesys/b2mex.jpg'
           }
         },
         "3" => {
           title: 'Colombia (Bridge III)',
           images: {
-            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb3cam2.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/Bridge3_Span/172.21.53.58/b3mex.jpg'
+            us: 'http://www.cityoflaredo.com/bridgesys/Check_Point/172.21.53.45/hugeb3cam2.jpg',
+            mx: 'http://www.cityoflaredo.com/bridgesys/Bridge3_Span/172.21.53.58/b3mex.jpg'
           }
         },
         "4" => {
           title: 'World Trade (Bridge IV)',
           images: {
-            us: 'http://www.ci.laredo.tx.us/bridgesys/hugeb4cam2.jpg',
-            mx: 'http://www.ci.laredo.tx.us/bridgesys/Bridge_Span/172.21.54.29/b4mex.jpg'
+            us: 'http://www.cityoflaredo.com/bridgesys/B4-US-side/172.21.54.24/hugeb4cam2.jpg',
+            mx: 'http://www.cityoflaredo.com/bridgesys/Bridge_Span/172.21.54.29/b4mex.jpg'
           }
         }
       }
